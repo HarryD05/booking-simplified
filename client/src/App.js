@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 //Components
 import Navbar from './components/navigation/Navbar';
@@ -29,7 +29,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <Router>
       <>
         <Navbar />
 
@@ -55,7 +55,7 @@ const App = () => {
           </Switch>
         </main>
       </>
-    </BrowserRouter>
+    </Router>
   );
 }
 
