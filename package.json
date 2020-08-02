@@ -4,7 +4,9 @@
   "description": "Full stack MERN app for event booking using GraphQL",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "dev": "concurrently \"npm run development\" \"cd client && npm start\""
   },
   "author": "Harry Davis",
   "license": "ISC",
